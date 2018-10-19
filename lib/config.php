@@ -24,7 +24,7 @@ class Config {
      * @return string retrieved value or default
      */
     public static function get($key, $default) {
-        return \OCP\Config::getUserValue(\OCP\User::getUser(), 'calibre_opds', $key, $default);
+        return \OCP\Config::getUserValue(\OC::$server->getConfig()->getUser(), 'calibre_opds', $key, $default);
     }
 
     /**
@@ -35,7 +35,7 @@ class Config {
      * @return bool success
      */
     public static function set($key, $value) {
-        return \OCP\Config::setUserValue(\OCP\User::getUser(), 'calibre_opds', $key, $value);
+        return \OCP\Config::setUserValue(\OC::$server->getConfig()->getUser(), 'calibre_opds', $key, $value);
     }
 
     /**
@@ -46,7 +46,7 @@ class Config {
      * @return string retrieved value or default
      */
     public static function getApp($key, $default) {
-        return \OCP\Config::getAppValue('calibre_opds', $key, $default);
+        return \OC::$server->getConfig()->getAppValue('calibre_opds', $key, $default);
     }
 
     /**
@@ -57,6 +57,6 @@ class Config {
      * @return bool success
      */
     public static function setApp($key, $value) {
-        return \OCP\Config::setAppValue('calibre_opds', $key, $value);
+        return \OC::$server->getConfig()->setAppValue('calibre_opds', $key, $value);
     }
 }
