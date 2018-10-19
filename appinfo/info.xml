@@ -33,7 +33,7 @@ See [README] for more information on (mis)features of this app.
         <php min-version="5.4" />
         <lib>xml</lib>
         <owncloud min-version="8.2" max-version="10.0" />
-        <nextcloud min-version="8.1" max-version="13" />
+        <nextcloud min-version="13" max-version="14" />
     </dependencies>
 	<settings>
 		<admin>OCA\calibre_opds\Settings\Admin</admin>
